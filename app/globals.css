@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.progress-cell {
+  @apply w-fit flex items-center gap-1 px-1 py-[3px] rounded border border-[#C1C8D1] bg-[rgba(193,200,209,0.30)] text-[#6E7686] text-[12px] leading-3 font-medium;
+}
+
+.progress-cell.complete {
+  @apply text-[#478524] border-[#B8EF81]  bg-[rgba(184,239,129,0.30)];
+}
+
+.progress-cell.pending {
+  @apply text-[#F90] border-[#FFE663] bg-[rgba(255,230,99,0.30)];
+}
+
+.rotating-svg {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
